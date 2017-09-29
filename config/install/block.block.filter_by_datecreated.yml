@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.filter_by_datecreated
+  enforced:
+    module:
+      - islandora_search_facets
+  module:
+    - facets
+    - system
+  theme:
+    - carapace
+id: filter_by_datecreated
+theme: carapace
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'facet_block:filter_by_datecreated'
+settings:
+  id: 'facet_block:filter_by_datecreated'
+  label: 'Date Created'
+  provider: facets
+  label_display: visible
+visibility:
+  request_path:
+    id: request_path
+    pages: /search
+    negate: false
+    context_mapping: {  }
