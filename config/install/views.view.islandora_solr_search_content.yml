@@ -1,16 +1,16 @@
-uuid: 198cec71-8dc5-43e9-abf0-23ab1b47b954
 langcode: en
 status: true
 dependencies:
   config:
     - search_api.index.default_solr_index
     - system.menu.main
+  enforced:
+    module:
+      - islandora_search_facets
   module:
     - search_api
-_core:
-  default_config_hash: DmeUz48d-M5PuHn1DDNotw7V3nQ_uptTW4IY3Ft_68s
-id: solr_search
-label: 'Solr search content'
+id: islandora_solr_search_content
+label: 'Islandora Solr search content'
 module: views
 description: 'A search page preconfigured to search through the content of your site'
 tag: ''
@@ -78,7 +78,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          operator: or
+          operator: and
           value: ''
           group: 1
           exposed: true
@@ -108,7 +108,6 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          parse_mode: terms
           min_length: 3
           fields: {  }
           plugin_id: search_api_fulltext
@@ -157,4 +156,3 @@ display:
       cacheable: false
       max-age: -1
       tags: {  }
-

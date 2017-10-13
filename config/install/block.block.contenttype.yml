@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
-    - facets.facet.filter_by_datecreated
+    - facets.facet.filter_by_content_type
   enforced:
     module:
       - islandora_search_facets
@@ -11,15 +11,15 @@ dependencies:
     - system
   theme:
     - carapace
-id: filter_by_datecreated
+id: contenttype
 theme: carapace
 region: sidebar_first
 weight: 0
 provider: null
-plugin: 'facet_block:filter_by_datecreated'
+plugin: 'facet_block:filter_by_content_type'
 settings:
-  id: 'facet_block:filter_by_datecreated'
-  label: 'Date Created'
+  id: 'facet_block:filter_by_content_type'
+  label: 'Content type'
   provider: facets
   label_display: visible
 visibility:
